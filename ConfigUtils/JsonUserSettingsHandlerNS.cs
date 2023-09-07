@@ -4,10 +4,33 @@ using System.IO;
 
 namespace MiJenner.ConfigUtils
 {
+    /// <summary>
+    /// Utility to handle configuration settings. 
+    /// Uses Newtonsoft.Json. 
+    /// Before usage: 
+    /// - Create a settings object (potentially with nested objects)
+    /// - Determine full path of configuration file to use. 
+    /// <code>
+    /// Settings settings; 
+    /// filepath = "config.json";
+    /// IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(filepath); 
+    /// bool readSuccess = setthingsHandler.TryRead(out settings); 
+    /// </code>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class JsonUserSettingsHandlerNS<T> : IUserSettingsHandler<T>
     {
         private string filePath; // The file path to the JSON settings file
 
+        /// <summary>
+        /// Constructor for JsonUserSettingsHandlerNS. 
+        /// It takes a full path including filename as input. 
+        /// This can however be changed later through property FilePath: 
+        /// <code>
+        /// settingsHandler.FilePath = "newfile.json"; 
+        /// </code>
+        /// </summary>
+        /// <param name="initialFilePath"></param>
         public JsonUserSettingsHandlerNS(string initialFilePath)
         {
             this.filePath = initialFilePath;
@@ -20,6 +43,16 @@ namespace MiJenner.ConfigUtils
             set => filePath = value;
         }
 
+        /// <summary>
+        /// TryWrite tries to write a settings object to json file. 
+        /// Syntax: 
+        /// <code>
+        /// bool writeSuccess = settingsHandler.TryWrite(settings); 
+        /// </code>
+        /// If successfull returns true, else false. 
+        /// </summary>
+        /// <param name="settings"></param>
+        /// <returns></returns>
         public bool TryWrite(T settings)
         {
             try
@@ -37,6 +70,18 @@ namespace MiJenner.ConfigUtils
             }
         }
 
+        /// <summary>
+        /// TryRead tries to read a settings object to json file. 
+        /// Syntax: 
+        /// <code>
+        /// bool readSuccess = settingsHandler.TryRead(out settings); 
+        /// </code>
+        /// If successfull returns true, else false. 
+        /// In either case settings is populated, either with 
+        /// valid data from json file, or with default values. 
+        /// </summary>
+        /// <param name="settings"></param>
+        /// <returns></returns>
         public bool TryRead(out T settings)
         {
             try

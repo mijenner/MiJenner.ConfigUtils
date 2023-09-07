@@ -12,7 +12,7 @@ namespace MSTestProject
         {
             // Arrange
             string filePath = "test_settings.json";
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(filePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(filePath);
             var expectedSettings = new Settings() { MyString = "test", MyInt = 42 };
 
             // Act
@@ -35,7 +35,7 @@ namespace MSTestProject
             // Reading from an empty file should return default values. 
 
             // Arrange
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>("empty.json");
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>("empty.json");
             var expectedSettings = new Settings(); // with default values. 
 
             // Act
@@ -62,7 +62,7 @@ namespace MSTestProject
             File.WriteAllText(testFilePath, initialJson);
 
             // Instantiate the handler with the test file path
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(testFilePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(testFilePath);
 
             // Create new settings to overwrite the existing data
             var newSettings = new Settings { MyString = "NewValue", MyInt = 99 };
@@ -101,7 +101,7 @@ namespace MSTestProject
             }
 
             // Instantiate the handler with the non-existent file path
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(nonExistentFilePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(nonExistentFilePath);
 
             // Act
             bool readSuccess = settingsHandler.TryRead(out Settings settings);
@@ -128,7 +128,7 @@ namespace MSTestProject
             File.WriteAllText(tooManyKeysFilePath, jsonWithTooManyKeys);
 
             // Instantiate the handler with the file path
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(tooManyKeysFilePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(tooManyKeysFilePath);
 
             // Act
             bool readSuccess = settingsHandler.TryRead(out Settings settings);
@@ -158,7 +158,7 @@ namespace MSTestProject
             File.WriteAllText(invalidJsonFilePath, invalidJson);
 
             // Instantiate the handler with the file path
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(invalidJsonFilePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(invalidJsonFilePath);
 
             // Act
             bool readSuccess = settingsHandler.TryRead(out Settings settings);
@@ -183,7 +183,7 @@ namespace MSTestProject
             File.WriteAllText(corruptedJsonFilePath, corruptedJson);
 
             // Instantiate the handler with the file path
-            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerNS<Settings>(corruptedJsonFilePath);
+            IUserSettingsHandler<Settings> settingsHandler = new JsonUserSettingsHandlerMS<Settings>(corruptedJsonFilePath);
 
             // Act
             bool readSuccess = settingsHandler.TryRead(out Settings settings);
