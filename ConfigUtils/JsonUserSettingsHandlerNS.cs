@@ -48,7 +48,7 @@ namespace MiJenner.ConfigUtils
                     settings = JsonConvert.DeserializeObject<T>(json);
                 } else
                 {
-                    settings = Activator.CreateInstance<T>();
+                    settings = GetDefaultSettings(); 
                 }
                 return true;
             }
@@ -56,9 +56,16 @@ namespace MiJenner.ConfigUtils
             {
                 // Handle exceptions and return false
                 Console.WriteLine($"Failed to read settings: {ex.Message}");
-                settings = default(T);
+                settings = GetDefaultSettings(); 
                 return false;
             }
+        }
+
+        // Method to load default settings
+        private T GetDefaultSettings()
+        {
+            // Create and return an instance of the default settings
+            return Activator.CreateInstance<T>();
         }
     }
 }
