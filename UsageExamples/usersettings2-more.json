@@ -1,0 +1,10 @@
+{
+  "KeyOne": 42,
+  "KeyFour": {
+    "Message2": "Hello, nested settings 2!"
+  },
+  "KeyTwo": true,
+  "KeyThree": {
+    "Message": "Hello, nested settings!"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "MyString": "set1",
+  "MyInt": 5,
+  "MySecondInt": 6,
+  "MyBool": true,
+  "MyDouble": 14.16
+}
