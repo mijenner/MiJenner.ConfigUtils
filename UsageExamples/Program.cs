@@ -1,7 +1,7 @@
 ﻿using MiJenner.ConfigUtils;
 using System;
 
-namespace UsageExamples
+namespace UsageExamples 
 {
     internal class Program
     {
@@ -12,13 +12,13 @@ namespace UsageExamples
 
             // First test, write object properties to json file: 
             Settings settings = new Settings() { MyString = "set1", MyInt = 5, MyBool = true, MyDouble = 14.16 }; 
-            if (settingsHandler.TryWrite(settings))
+            if (settingsHandler.TryWrite(settings)) 
             {
                 Console.WriteLine("Writing object to json file:" + settingsHandler.FilePath);
                 Console.WriteLine("TryWrite returned true");
                 Console.WriteLine("Object: ");
                 settings.Print();
-            }
+            } 
 
             // Second test, read from json file created above to object: 
             Console.WriteLine("-------------------------------------------");
