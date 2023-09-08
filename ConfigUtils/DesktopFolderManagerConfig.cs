@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiJenner.ConfigUtils
+﻿namespace MiJenner.ConfigUtils
 {
     public class DesktopFolderManagerConfig
     {
-        public UserDataPolicy UserDataPolicy { get; set; } = UserDataPolicy.PolicyFileAppDataLocal;
+        public UserDataPolicy UserDataPolicy { get; set; } = UserDataPolicy.PolicyFileDocument;
         public string UserDataMagic { get; set; } = string.Empty;
-        public UserConfigPolicy UserConfigPolicy { get; set; }
+        public UserConfigPolicy UserConfigPolicy { get; set; } = UserConfigPolicy.PolicyFileAppDataLocal;
         public string UserConfigMagic { get; set; } = string.Empty;
         public string CompanyName { get; set; } = string.Empty;
         public string AppName { get; set; } = string.Empty; 

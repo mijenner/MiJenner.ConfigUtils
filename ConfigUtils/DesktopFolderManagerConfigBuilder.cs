@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiJenner.ConfigUtils
+﻿namespace MiJenner.ConfigUtils
 {
-
-
     public class DesktopFolderManagerConfigBuilder
     {
-        private DesktopFolderManagerConfig config = new DesktopFolderManagerConfig();
+        private readonly DesktopFolderManagerConfig config = new DesktopFolderManagerConfig();
 
         public DesktopFolderManagerConfigBuilder WithUserDataPolicy(UserDataPolicy policy)
         {
