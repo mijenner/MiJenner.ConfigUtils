@@ -1,1 +1,1 @@
-# MiJennerConfigUtils
+# MiJennerConfigUtils-UserSettings
