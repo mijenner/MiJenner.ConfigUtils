@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConfigUtils\ConfigUtils.csproj" />
+    <ProjectReference Include="..\ConfigUtils\MiJennerConfigUtils-UserSettings.csproj" />
   </ItemGroup>
 
   <ItemGroup>
