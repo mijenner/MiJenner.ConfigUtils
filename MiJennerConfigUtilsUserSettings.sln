@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsageExamples", "UsageExamp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSTestProject", "MSTestProject\MSTestProject.csproj", "{7EC59A58-0863-47E2-BBDE-9428F62896CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsageExamplesFolders", "UsageExamplesFolders\UsageExamplesFolders.csproj", "{D18167CB-6842-4743-9312-B6D76CB3BB9B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiJennerConfigUtilsUserSettings", "MiJennerConfigUtilsUserSettings\MiJennerConfigUtilsUserSettings.csproj", "{5E22A077-E979-45AD-B9E4-F3AAF1DEEBCB}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{7EC59A58-0863-47E2-BBDE-9428F62896CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EC59A58-0863-47E2-BBDE-9428F62896CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EC59A58-0863-47E2-BBDE-9428F62896CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D18167CB-6842-4743-9312-B6D76CB3BB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D18167CB-6842-4743-9312-B6D76CB3BB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D18167CB-6842-4743-9312-B6D76CB3BB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D18167CB-6842-4743-9312-B6D76CB3BB9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E22A077-E979-45AD-B9E4-F3AAF1DEEBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E22A077-E979-45AD-B9E4-F3AAF1DEEBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E22A077-E979-45AD-B9E4-F3AAF1DEEBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
