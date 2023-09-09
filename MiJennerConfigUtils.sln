@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiJennerConfigUtils-UserSettings", "ConfigUtils\MiJennerConfigUtils-UserSettings.csproj", "{84EA744A-8813-4EF8-B4D7-935133BD1AB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiJennerConfigUtilsUserSettings", "ConfigUtils\MiJennerConfigUtilsUserSettings.csproj", "{84EA744A-8813-4EF8-B4D7-935133BD1AB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsageExamples", "UsageExamples\UsageExamples.csproj", "{FADACFAF-1F70-4D4B-83F5-1D7FCA0431EE}"
 EndProject
