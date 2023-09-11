@@ -47,4 +47,4 @@ settingsHandler.TryRead(out settingsb)
 Note: TryRead returns a boolean depending on success or failure. 
 
 # More advanced solutions
-If you are looking for a more advanced solution, with event based storing of state etc ..., please consider <a href="https://github.com/anakic/Jot" target="_blank">https://github.com/anakic/Jot</a>, [https://github.com/anakic/Jot](https://github.com/anakic/Jot) 
+If you are looking for a more advanced solution, with event based triggering etc ..., please consider [https://github.com/anakic/Jot](https://github.com/anakic/Jot) 
